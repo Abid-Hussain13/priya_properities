@@ -46,7 +46,7 @@ const StudentsSection = () => {
             whileInView={{ y: 0, opacity: 1 }}
             className="aspect-[4/5] bg-surface rounded-2xl md:rounded-3xl overflow-hidden mt-8 md:mt-12"
           >
-            <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&q=80" alt="Student" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" />
+            <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&q=80" alt="Student" className="w-full h-full object-cover hover:scale-110 transition-all duration-700" />
           </motion.div>
           <motion.div 
             initial={{ y: -20, opacity: 0 }}
@@ -54,7 +54,7 @@ const StudentsSection = () => {
             transition={{ delay: 0.2 }}
             className="aspect-[4/5] bg-surface rounded-2xl md:rounded-3xl overflow-hidden"
           >
-            <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&q=80&w=1000" alt="Study" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" />
+            <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&q=80&w=1000" alt="Study" className="w-full h-full object-cover hover:scale-110 transition-all duration-700" />
           </motion.div>
         </div>
       </div>
