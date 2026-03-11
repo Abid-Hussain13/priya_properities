@@ -2,9 +2,9 @@ import { motion } from 'framer-motion';
 
 const WhyChooseUs = () => {
   const cards = [
-    { title: "Exclusive Sales", image: "https://images.unsplash.com/photo-1480074568708-e7b720bb3f09?auto=format&fit=crop&q=80", number: "01" },
-    { title: "Premium Lettings", image: "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&q=80", number: "02" },
-    { title: "Student Specialist", image: "https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&q=80", number: "03" }
+    { title: "Exclusive Sales", image: "https://images.unsplash.com/photo-1480074568708-e7b720bb3f09?auto=format&fit=crop&q=80" },
+    { title: "Premium Lettings", image: "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&q=80" },
+    { title: "Student Specialist", image: "https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&q=80" }
   ];
 
   return (
@@ -48,20 +48,24 @@ const WhyChooseUs = () => {
               key={idx}
               initial={{ opacity: 0, y: 100 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: idx * 0.2, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-              className="group relative flex-1 w-full md:w-auto md:mt-[var(--margin-top)]"
+              viewport={{ margin: "-20% 0px -20% 0px" }}
+              transition={{ delay: idx * 0.1, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+              className="group relative flex-1 w-full max-w-[280px] mx-auto md:max-w-none md:mt-[var(--margin-top)]"
               style={{ '--margin-top': `${idx * 60}px` } as any}
             >
-              <div className="aspect-[3/4] rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden mb-6">
-                <img 
+              <div className="aspect-[3/4] rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden mb-6 relative">
+                {/* Scroll-triggered reveal: Image turns colorful when in view on mobile */}
+                <motion.img 
+                  initial={{ filter: "grayscale(100%)" }}
+                  whileInView={{ filter: "grayscale(0%)" }}
+                  viewport={{ amount: 0.8 }}
                   src={card.image} 
                   alt={card.title} 
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700"
+                  className="w-full h-full object-cover transition-all duration-700 md:group-hover:scale-110"
                 />
               </div>
-              <div className="flex justify-between items-end">
-                <h3 className="text-2xl font-bebas tracking-wide">{card.title}</h3>
-                <span className="text-[10px] font-headline opacity-40">\ {card.number}</span>
+              <div className="flex justify-center md:justify-start items-end">
+                <h3 className="text-2xl font-bebas tracking-wide text-center md:text-left">{card.title}</h3>
               </div>
             </motion.div>
           ))}
