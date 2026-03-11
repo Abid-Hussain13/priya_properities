@@ -7,7 +7,6 @@ const Hero = () => {
   // y1: Image moves slightly slower than scroll (parallax)
   // y2: Background text moves up faster
   const y1 = useTransform(scrollY, [0, 1000], [0, 300]);
-  const _y2 = useTransform(scrollY, [0, 1000], [0, -400]);
   const imgY = useTransform(scrollY, [0, 1000], [0, -150]); // Image moves inside container
 
   return (
