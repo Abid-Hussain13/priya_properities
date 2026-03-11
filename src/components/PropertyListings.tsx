@@ -25,15 +25,22 @@ const properties: Property[] = [
 const PropertyCard = ({ property }: { property: Property }) => (
   <motion.div 
     layout
-    initial={{ opacity: 0, scale: 0.8 }}
+    initial={{ opacity: 0, scale: 0.8, borderColor: "rgba(255,255,255,0.08)", boxShadow: "0 0 0px rgba(181,229,51,0)" }}
     animate={{ opacity: 1, scale: 1 }}
     exit={{ opacity: 0, scale: 0.8 }}
+    whileInView={{ 
+      borderColor: "rgba(181,229,51,0.4)",
+      boxShadow: "0 0 30px rgba(181,229,51,0.1)"
+    }}
+    viewport={{ amount: 0.6, margin: "-10% 0px -10% 0px" }}
     transition={{ 
       opacity: { duration: 0.2 },
-      layout: { type: "spring", stiffness: 250, damping: 25, mass: 0.5 }
+      layout: { type: "spring", stiffness: 250, damping: 25, mass: 0.5 },
+      borderColor: { duration: 0.5 },
+      boxShadow: { duration: 0.5 }
     }}
     whileHover={{ y: -10 }}
-    className="group relative bg-surface border border-border rounded-3xl overflow-hidden hover:border-accent/40 hover:shadow-[0_0_30px_rgba(181,229,51,0.1)] transition-all"
+    className="group relative bg-surface border rounded-3xl overflow-hidden transition-all"
   >
     <div className="aspect-[4/3] overflow-hidden relative">
       <img 
