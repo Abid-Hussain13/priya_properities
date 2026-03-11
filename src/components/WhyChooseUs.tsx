@@ -8,8 +8,8 @@ const WhyChooseUs = () => {
   ];
 
   return (
-    <section className="bg-white py-32 text-black overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row gap-20">
+    <section className="bg-white py-20 md:py-32 text-black overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row gap-12 lg:gap-20">
         <div className="lg:w-1/3">
           <motion.span 
             initial={{ opacity: 0 }}
@@ -21,7 +21,7 @@ const WhyChooseUs = () => {
           <motion.h2 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="text-6xl font-bebas leading-[0.9] mb-8"
+            className="text-4xl md:text-6xl font-bebas leading-[0.9] mb-8"
           >
             Why Choose Us for Your <span className="text-accent italic">Next Property?</span>
           </motion.h2>
@@ -49,10 +49,10 @@ const WhyChooseUs = () => {
               initial={{ opacity: 0, y: 100 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: idx * 0.2, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-              style={{ marginTop: idx * 60 }}
-              className="group relative flex-1"
+              className="group relative flex-1 w-full md:w-auto md:mt-[var(--margin-top)]"
+              style={{ '--margin-top': `${idx * 60}px` } as any}
             >
-              <div className="aspect-[3/4] rounded-[2.5rem] overflow-hidden mb-6">
+              <div className="aspect-[3/4] rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden mb-6">
                 <img 
                   src={card.image} 
                   alt={card.title} 

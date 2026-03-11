@@ -2,14 +2,14 @@ import { motion } from 'framer-motion';
 
 const Contact = () => {
   return (
-    <section id="contact" className="bg-bg py-32 px-6">
+    <section id="contact" className="bg-bg py-20 md:py-32 px-6">
       <div className="max-w-7xl mx-auto flex flex-col items-center text-center">
         <span className="text-accent text-xs font-headline uppercase tracking-[0.4em] mb-4 block">Get In Touch</span>
-        <h2 className="text-7xl md:text-9xl font-bebas leading-[0.85] mb-12">
+        <h2 className="text-5xl md:text-9xl font-bebas leading-[0.85] mb-8 md:mb-12">
           Start Your <span className="text-accent italic">Journey</span>
         </h2>
 
-        <div className="flex flex-col md:flex-row gap-12 text-xl font-bebas tracking-wide mb-24 opacity-80">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 text-lg md:text-xl font-bebas tracking-wide mb-16 md:mb-24 opacity-80">
           <div className="flex items-center gap-3">
             <span className="text-accent opacity-60">📞</span> 0116 255 9950
           </div>
@@ -26,22 +26,22 @@ const Contact = () => {
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          className="w-full max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-6 text-left"
+          className="w-full max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 text-left"
         >
           <input 
             type="text" 
             placeholder="NAME" 
-            className="bg-surface border border-border p-6 rounded-2xl focus:border-accent/40 outline-none text-xs tracking-widest uppercase font-headline"
+            className="bg-surface border border-border p-5 md:p-6 rounded-xl md:rounded-2xl focus:border-accent/40 outline-none text-[10px] md:text-xs tracking-widest uppercase font-headline"
           />
           <input 
             type="email" 
             placeholder="EMAIL" 
-            className="bg-surface border border-border p-6 rounded-2xl focus:border-accent/40 outline-none text-xs tracking-widest uppercase font-headline"
+            className="bg-surface border border-border p-5 md:p-6 rounded-xl md:rounded-2xl focus:border-accent/40 outline-none text-[10px] md:text-xs tracking-widest uppercase font-headline"
           />
           <textarea 
             placeholder="MESSAGE" 
             rows={5}
-            className="bg-surface border border-border p-6 rounded-2xl focus:border-accent/40 outline-none text-xs tracking-widest uppercase font-headline md:col-span-2 resize-none"
+            className="bg-surface border border-border p-5 md:p-6 rounded-xl md:rounded-2xl focus:border-accent/40 outline-none text-[10px] md:text-xs tracking-widest uppercase font-headline md:col-span-2 resize-none"
           />
           <motion.button 
             whileHover={{ scale: 1.02 }}
@@ -55,7 +55,7 @@ const Contact = () => {
             onMouseLeave={(e) => {
               e.currentTarget.style.transform = `translate(0px, 0px)`;
             }}
-            className="bg-accent text-black p-6 rounded-2xl text-xs font-bold uppercase tracking-[0.2em] md:col-span-2 transition-transform duration-300"
+            className="bg-accent text-black p-5 md:p-6 rounded-xl md:rounded-2xl text-xs font-bold uppercase tracking-[0.2em] md:col-span-2 transition-transform duration-300"
           >
             Send Inquiry
           </motion.button>

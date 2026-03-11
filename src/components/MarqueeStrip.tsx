@@ -11,15 +11,15 @@ const MarqueeStrip = () => {
   ];
 
   return (
-    <div className="bg-surface py-8 border-y border-border overflow-hidden">
+    <div className="bg-surface py-6 md:py-8 border-y border-border overflow-hidden">
       <div className="h-[1px] w-full bg-accent opacity-20 absolute top-0" />
       <div className="flex whitespace-nowrap animate-marquee">
         {[...items, ...items].map((item, index) => (
-          <div key={index} className="flex items-center mx-12">
-            <span className="text-xl font-bebas tracking-wider opacity-60 hover:opacity-100 transition-opacity cursor-default">
+          <div key={index} className="flex items-center mx-6 md:mx-12">
+            <span className="text-lg md:text-xl font-bebas tracking-wider opacity-60 hover:opacity-100 transition-opacity cursor-default">
               {item}
             </span>
-            <div className="w-1.5 h-1.5 rounded-full bg-accent ml-24" />
+            <div className="w-1.5 h-1.5 rounded-full bg-accent ml-12 md:ml-24" />
           </div>
         ))}
       </div>

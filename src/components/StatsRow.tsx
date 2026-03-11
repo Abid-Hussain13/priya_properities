@@ -30,8 +30,8 @@ const Counter = ({ value, label, suffix = "" }: { value: number, label: string, 
 
 const StatsRow = () => {
   return (
-    <section className="bg-bg py-24 border-y border-border">
-      <div className="max-w-7xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-8">
+    <section className="bg-bg py-16 md:py-24 border-y border-border">
+      <div className="max-w-7xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
         <Counter value={38} label="Years of Experience" suffix="+" />
         <Counter value={80} label="Student lets before Xmas" suffix="%" />
         <Counter value={2} label="Leicester Universities" />

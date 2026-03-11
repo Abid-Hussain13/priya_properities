@@ -11,11 +11,11 @@ const Hero = () => {
   const imgY = useTransform(scrollY, [0, 1000], [0, -150]); // Image moves inside container
 
   return (
-    <section className="relative h-screen w-full overflow-hidden flex items-center justify-center">
+    <section className="relative h-[100svh] w-full overflow-hidden flex items-center justify-center">
       {/* Main Image Container */}
       <motion.div 
         style={{ y: y1 }}
-        className="relative z-10 w-[90%] md:w-[85%] h-[70%] md:h-[80%] rounded-[2.5rem] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
+        className="relative z-10 w-[95%] md:w-[85%] h-[60%] md:h-[80%] rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
       >
         <div className="absolute inset-0 bg-gradient-to-t from-bg via-transparent to-transparent z-20 opacity-60" />
         <motion.div 
@@ -31,12 +31,12 @@ const Hero = () => {
       </motion.div>
 
       {/* Tagline Stack - Top Left */}
-      <div className="absolute top-[20%] left-[10%] z-30 text-white flex flex-col items-start gap-1">
+      <div className="absolute top-[12%] md:top-[20%] left-[5%] md:left-[10%] z-30 text-white flex flex-col items-start gap-1">
         <motion.span 
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.5 }}
-          className="text-accent text-xs font-headline uppercase tracking-[0.3em]"
+          className="text-accent text-[10px] md:text-xs font-headline uppercase tracking-[0.3em]"
         >
           Excellence // Leicester Lettings
         </motion.span>
@@ -44,7 +44,7 @@ const Hero = () => {
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.7 }}
-          className="text-sm font-light opacity-60 tracking-widest"
+          className="text-xs md:text-sm font-light opacity-60 tracking-widest"
         >
           TRUSTED SINCE 1986
         </motion.span>
@@ -55,9 +55,9 @@ const Hero = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1 }}
-        className="absolute bottom-[15%] right-[10%] z-30 max-w-[300px] text-right"
+        className="absolute bottom-[10%] md:bottom-[15%] right-[5%] md:right-[10%] z-30 max-w-[240px] md:max-w-[300px] text-right"
       >
-        <p className="text-sm font-light leading-relaxed opacity-80 uppercase tracking-widest">
+        <p className="text-xs md:text-sm font-light leading-relaxed opacity-80 uppercase tracking-widest">
           Redefining luxury living in the heart of <span className="text-accent italic">Leicester</span>. Expert guidance for sales & lettings.
         </p>
       </motion.div>
